@@ -15,6 +15,9 @@ public class Bill {
     private Map<User, Integer> billMap;
     private User paidBy;
 
+    public Bill() {
+    }
+
     public Bill(String billId, int billAmount, String expenseDate, Sharers sharers, User paidBy) {
         this.billId = billId;
         this.billAmount = billAmount;

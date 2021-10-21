@@ -20,17 +20,24 @@ public class BillSharingService {
         sharer1.addSharer(user3);
 
         sharer1.displayUsers();
+        System.out.println("---------------------------------------------------");
 
         Bill bill1 = new Bill("bill1", 1000, "21-Oct", sharer1, user1);
+        Bill bill2 = new Bill("bill1", 1000, "21-Oct", sharer1, user1);
+        Bill bill3 = new Bill("bill1", 1000, "21-Oct", sharer1, user1);
+
         Splitter split1 = new Splitter(bill1);
+        Splitter split2 = new Splitter(bill2);
+        Splitter split3 = new Splitter(bill3);
 
-        split1.eqSplit();
+        split1.equalSplit();
+        split2.percentSplit();
+        split3.exactSplit();
 
-        for (Object user : bill1.getBillMap().keySet()) {
+        System.out.println("The bill has been paid by   :  "+bill1.getPaidBy().getUserName());
+        for (User user : bill1.getBillMap().keySet()) {
 
-            System.out.println("For the user  " + user + "   The contribution should be   " + bill1.getBillMap().get(user));
-
-
+            System.out.println("For the user  " + user.getUserName() + "   The contribution should be   " + bill1.getBillMap().get(user));
         }
     }
 }

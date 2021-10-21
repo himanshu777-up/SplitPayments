@@ -13,7 +13,7 @@ public class Splitter {
         this.bill = bill;
     }
 
-    public void eqSplit(){
+    public void equalSplit(){
 
         Sharers sharerList = bill.getSharers();
         Map<User, Integer> billShare = bill.getBillMap();
@@ -31,6 +31,8 @@ public class Splitter {
     }
 
     public void percentSplit(){
+
+
 
     }
 
