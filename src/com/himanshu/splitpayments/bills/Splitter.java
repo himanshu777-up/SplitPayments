@@ -13,7 +13,7 @@ public class Splitter {
         this.bill = bill;
     }
 
-    public void equalSplit(){
+    public void equalSplit() {
 
         Sharers sharerList = bill.getSharers();
         Map<User, Integer> billShare = bill.getBillMap();
@@ -22,21 +22,27 @@ public class Splitter {
         int n = sharerList.getUserList().size();
         int eqAmount = shareAmount / n;
 
-        for (User user : sharerList.getUserList()) {
+        for (User user : bill.getSharers().getUserList()) {
 
-            billShare.put(user, eqAmount);
+            if (bill.getPaidBy().containsKey(user)) {
+                user.getOwesToGroups().put(bill.getSharers(), bill.getPaidBy().get(user) - eqAmount);
+            } else {
+                bill.getBillMap().put(user, eqAmount);
+            }
 
         }
 
-    }
-
-    public void percentSplit(){
-
-
 
     }
 
-    public void exactSplit(){
+    public void percentSplit() {
+        //to do
+
+
+    }
+
+    public void exactSplit() {
+        //to do
 
     }
 

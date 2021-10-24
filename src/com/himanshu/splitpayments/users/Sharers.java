@@ -30,13 +30,17 @@ public class Sharers {
     }
 
     public void displayUsers() {
+        System.out.println("Displaying the group with groupId   "+ getGroupId());
         for(User user: getUserList()){
             System.out.println("User ID: "+ user.getUserId()+"  UserName: "+user.getUserName()+ "  ContactNumber  "+ user.getContactNumber());
         }
+        System.out.println("------------------------------------------------");
     }
 
-    public void addSharer(User user1) {
+    public void addSharer(List<User> users) {
+        for(User user: users){
+            userList.add(user);
+        }
 
-        userList.add(user1);
     }
 }

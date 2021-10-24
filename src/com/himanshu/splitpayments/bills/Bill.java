@@ -3,7 +3,9 @@ package com.himanshu.splitpayments.bills;
 import com.himanshu.splitpayments.users.Sharers;
 import com.himanshu.splitpayments.users.User;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Bill {
@@ -13,18 +15,26 @@ public class Bill {
     private String expenseDate;
     private Sharers sharers;
     private Map<User, Integer> billMap;
-    private User paidBy;
-
-    public Bill() {
-    }
+    private Map<User, Integer> paidBy;
 
     public Bill(String billId, int billAmount, String expenseDate, Sharers sharers, User paidBy) {
+    }
+
+    public Bill(String billId, int billAmount, String expenseDate, Sharers sharers) {
         this.billId = billId;
         this.billAmount = billAmount;
         this.expenseDate = expenseDate;
         this.sharers = sharers;
-        this.paidBy = paidBy;
+//        this.paidBy = new HashMap<>();
         this.billMap = new HashMap<>();
+    }
+
+    public void addExpense(Map<User, Integer> map){
+        this.paidBy = map;
+    }
+
+    public void setPaidBy(Map<User, Integer> paidBy) {
+        this.paidBy = paidBy;
     }
 
     public String getBillId() {
@@ -67,11 +77,7 @@ public class Bill {
         this.billMap = billMap;
     }
 
-    public User getPaidBy() {
+    public Map<User, Integer> getPaidBy() {
         return paidBy;
-    }
-
-    public void setPaidBy(User paidBy) {
-        this.paidBy = paidBy;
     }
 }
