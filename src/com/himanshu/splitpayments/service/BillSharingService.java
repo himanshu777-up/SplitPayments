@@ -71,6 +71,8 @@ public class BillSharingService {
         Splitter split2 = new Splitter(bill2);
         Splitter split3 = new Splitter(bill3);
 
+        System.out.println("Calculating the bills.............");
+
         split1.equalSplit();
         split2.equalSplit();
         split3.equalSplit();

@@ -70,6 +70,7 @@ public class User {
             sum+=owesToGroups.get(sharer);
             System.out.println(sharer.getGroupId()+" --- amount is   "+ owesToGroups.get(sharer));
         }
+
         System.out.println("And the total amount is   "+sum);
         System.out.println("*********************************");
         System.out.println("  ");
