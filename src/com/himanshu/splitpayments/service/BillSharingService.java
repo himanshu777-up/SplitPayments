@@ -24,9 +24,9 @@ public class BillSharingService {
         Sharers sharer2 = new Sharers("group2");
         Sharers sharer3 = new Sharers("group3");
 
-        sharer1.addSharer(new ArrayList<>(Arrays.asList(user1, user2, user3, user4, user5)));
-        sharer2.addSharer(new ArrayList<>(Arrays.asList(user1, user2, user3, user4, user5)));
-        sharer3.addSharer(new ArrayList<>(Arrays.asList(user1, user2, user3, user4, user5)));
+        sharer1.addSharer(Arrays.asList(user1, user2, user3, user4, user5));
+        sharer2.addSharer(Arrays.asList(user1, user2, user3, user4, user5));
+        sharer3.addSharer(Arrays.asList(user1, user2, user3, user4, user5));
 
         sharer1.displayUsers();
         sharer2.displayUsers();
