@@ -25,7 +25,7 @@ public class Splitter {
         for (User user : bill.getSharers().getUserList()) {
 
             if (bill.getPaidBy().containsKey(user)) {
-                user.getOwesToGroups().put(bill.getSharers(), bill.getPaidBy().get(user) - eqAmount);
+                user.getOwesToGroups().put(bill.getSharers(), ((bill.getPaidBy().get(user))*shareAmount)/100 - eqAmount);
             } else {
                 bill.getBillMap().put(user, eqAmount);
             }

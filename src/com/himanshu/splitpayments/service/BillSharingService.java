@@ -39,31 +39,31 @@ public class BillSharingService {
 
         bill1.setPaidBy(new HashMap<User, Integer>()
                         {{
-                           put(user1, 50);
-                           put(user2, 650);
-                           put(user3, 100);
-                           put(user4, 180);
-                           put(user5, 20);
+                           put(user1, 10);
+                           put(user2, 20);
+                           put(user3, 30);
+                           put(user4, 15);
+                           put(user5, 25);
                         }}
         );
 
         bill2.setPaidBy(new HashMap<User, Integer>()
                         {{
-                            put(user1, 100);
-                            put(user2, 300);
-                            put(user3, 500);
-                            put(user4, 500);
-                            put(user5, 600);
+                            put(user1, 20);
+                            put(user2, 30);
+                            put(user3, 10);
+                            put(user4, 25);
+                            put(user5, 15);
                         }}
         );
 
         bill3.setPaidBy(new HashMap<User, Integer>()
                         {{
-                            put(user1, 1000);
-                            put(user2, 500);
-                            put(user3, 300);
-                            put(user4, 600);
-                            put(user5, 600);
+                            put(user1, 70);
+                            put(user2, 5);
+                            put(user3, 5);
+                            put(user4, 5);
+                            put(user5, 15);
                         }}
         );
 
@@ -81,5 +81,7 @@ public class BillSharingService {
         user1.showGroupWiseDebt();
         user2.showGroupWiseDebt();
         user3.showGroupWiseDebt();
+        user4.showGroupWiseDebt();
+        user5.showGroupWiseDebt();
     }
 }
