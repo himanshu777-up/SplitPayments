@@ -3,9 +3,7 @@ package com.himanshu.splitpayments.bills;
 import com.himanshu.splitpayments.users.Sharers;
 import com.himanshu.splitpayments.users.User;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Bill {

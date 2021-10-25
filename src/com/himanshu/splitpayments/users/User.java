@@ -18,7 +18,6 @@ public class User {
     }
 
 
-
     public Map<User, Integer> getOwesTo() {
         return owesTo;
     }
@@ -63,15 +62,15 @@ public class User {
 
     }
 
-    public void showGroupWiseDebt(){
+    public void showGroupWiseDebt() {
         System.out.println("The user " + getUserName() + "  owes the following amounts to different groups");
-        int sum=0;
+        int sum = 0;
         for (Sharers sharer : owesToGroups.keySet()) {
-            sum+=owesToGroups.get(sharer);
-            System.out.println(sharer.getGroupId()+" --- amount is   "+ owesToGroups.get(sharer));
+            sum += owesToGroups.get(sharer);
+            System.out.println(sharer.getGroupId() + " --- amount is   " + owesToGroups.get(sharer));
         }
 
-        System.out.println("And the total amount is   "+sum);
+        System.out.println("And the total amount is   " + sum);
         System.out.println("*********************************");
         System.out.println("  ");
     }

@@ -37,18 +37,16 @@ public class BillSharingService {
         Bill bill2 = new Bill("bill1", 2000, "21-Oct", sharer2);
         Bill bill3 = new Bill("bill1", 3000, "21-Oct", sharer3);
 
-        bill1.setPaidBy(new HashMap<User, Integer>()
-                        {{
-                           put(user1, 10);
-                           put(user2, 20);
-                           put(user3, 30);
-                           put(user4, 15);
-                           put(user5, 25);
+        bill1.setPaidBy(new HashMap<User, Integer>() {{
+                            put(user1, 10);
+                            put(user2, 20);
+                            put(user3, 30);
+                            put(user4, 15);
+                            put(user5, 25);
                         }}
         );
 
-        bill2.setPaidBy(new HashMap<User, Integer>()
-                        {{
+        bill2.setPaidBy(new HashMap<User, Integer>() {{
                             put(user1, 20);
                             put(user2, 30);
                             put(user3, 10);
@@ -57,8 +55,7 @@ public class BillSharingService {
                         }}
         );
 
-        bill3.setPaidBy(new HashMap<User, Integer>()
-                        {{
+        bill3.setPaidBy(new HashMap<User, Integer>() {{
                             put(user1, 70);
                             put(user2, 5);
                             put(user3, 5);

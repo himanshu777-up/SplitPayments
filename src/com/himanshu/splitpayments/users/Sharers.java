@@ -12,7 +12,6 @@ public class Sharers {
         this.userList = new ArrayList<>();
     }
 
-
     public String getGroupId() {
         return groupId;
     }
@@ -41,6 +40,5 @@ public class Sharers {
         for(User user: users){
             userList.add(user);
         }
-
     }
 }
